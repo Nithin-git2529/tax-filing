@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Tax Filing Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Tax Filing Demo (Educational)</h1>
+
+  <section class="card">
+    <h2>Load Sample W-2</h2>
+    <button onclick="loadW2()">Load</button>
+    <pre id="w2"></pre>
+  </section>
+
+  <section class="card">
+    <h2>Estimate Tax</h2>
+    <label>Filing Status
+      <select id="status">
+        <option value="single">Single</option>
+        <option value="married_joint">Married Filing Jointly</option>
+      </select>
+    </label>
+    <label>Wages <input id="wages" type="number" value="68000" /></label>
+    <label>Withheld (federal) <input id="withheld" type="number" value="7200" /></label>
+    <button onclick="estimate()">Estimate</button>
+    <pre id="result"></pre>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
